@@ -1,3 +1,4 @@
+#!/bin/bash
 # Simulating the Graphs Generator Plugin that doesn't work in a remote JMeter scenario.
 # Make sure to input the arguments in the correct order.
 
@@ -67,4 +68,5 @@ fi
   JMETER_HOME=$JMETER_HOME java -jar $CMD_RUNNER --tool Reporter --generate-png $REPORT_DIR_PATH/TimesVsThreads.png --input-jtl $TEST_RESULTS_FILE --plugin-type TimesVsThreads --width 1024 --height 768 --aggregate-rows yes
   JMETER_HOME=$JMETER_HOME java -jar $CMD_RUNNER --tool Reporter --generate-png $REPORT_DIR_PATH/ThreadsStateOverTime.png --input-jtl $TEST_RESULTS_FILE --plugin-type ThreadsStateOverTime --width 1024 --height 768
   JMETER_HOME=$JMETER_HOME java -jar $CMD_RUNNER --tool Reporter --generate-png $REPORT_DIR_PATH/ThroughputVsThreads.png --input-jtl $TEST_RESULTS_FILE --plugin-type ThroughputVsThreads --width 1024 --height 768 
-  JMETER_HOME=$JMETER_HOME java -jar $CMD_RUNNER --tool Reporter --generate-png $REPORT_DIR_PATH/ThroughputVsThreads-selected-pages.png --input-jtl $TEST_RESULTS_FILE --plugin-type ThroughputVsThreads --width 1024 --
+  JMETER_HOME=$JMETER_HOME java -jar $CMD_RUNNER --tool Reporter --generate-png $REPORT_DIR_PATH/ThroughputVsThreads-selected-pages.png --input-jtl $TEST_RESULTS_FILE --plugin-type ThroughputVsThreads --width 1024 --height 768 --include-labels "Country Overview,Accomodation Overview,Home Page,Resa Page,ResortAllHotels"
+
