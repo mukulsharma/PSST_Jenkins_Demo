@@ -45,7 +45,7 @@ if [ ! -f "$JMETER_HOME/lib/ext/JMeterPlugins-ExtrasLibs.jar" ]; then
 	exit 1
 fi
 
-CMD_RUNNER=$JMETER_HOME/lib/ext/cmdrunner-2.0.jar
+CMD_RUNNER=$JMETER_HOME/lib/ext/CMDRunner.jar
 
 if [ ! -f "$CMD_RUNNER" ]; then
 	echo "This script requires the jmeter CMDRunner.jar, but it was not found in $CMD_RUNNER!"
