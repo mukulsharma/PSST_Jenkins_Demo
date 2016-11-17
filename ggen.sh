@@ -28,7 +28,7 @@ fi
 #Edit Job Name - Reporting_PublicGIT
 #Edit Directory Name from Docker VM - ptruns
 if [ -z "$JMETER_HOME" ]; then
-	JMETER_HOME=/home/ptruns/workspace/Reporting_PublicGIT/apache-jmeter-3.0
+	JMETER_HOME=/home/osboxes/Docker/workspace/Test-2-ReportDemo/apache-jmeter-3.0
 	echo "JMETER_HOME not explicitly set, defaulting to $JMETER_HOME"
 fi
 
@@ -45,7 +45,7 @@ if [ ! -f "$JMETER_HOME/lib/ext/JMeterPlugins-ExtrasLibs.jar" ]; then
 	exit 1
 fi
 
-CMD_RUNNER=$JMETER_HOME/lib/ext/CMDRunner.jar
+CMD_RUNNER=$JMETER_HOME/lib/ext/cmdrunner-1.0.1.jar
 if [ ! -f "$CMD_RUNNER" ]; then
 	echo "This script requires the jmeter CMDRunner.jar, but it was not found in $CMD_RUNNER!"
 	usage
